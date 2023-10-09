@@ -134,66 +134,67 @@ main section span{
 main section > button{
     margin-bottom: 50px;
 }
+main section .flex .box33,
+main section .flex .box100{
+    width: calc((100% - 100px) / 3);
+    border: 1px solid var(--button-border);
+}
+main section .flex .box100{
+    width: 100%;
+}
 main section .flex{
     gap: 50px;
     flex-wrap: wrap;
 }
-main section .flex .box33{
-    width: calc((100% - 100px) / 3);
-    border: 1px solid var(--button-border);
+main section .box100 .space.flex{
+    flex-wrap: nowrap;
 }
-main section .box33 h3{
+main section h3{
     font-weight: 400;
     font-size: 13px;
     text-align: center;
     padding: 12px;
     border-bottom: 1px solid var(--button-border);
 }
-main section .box33 .space{
+main section .space{
     padding: 39px 25px 28px;
 }
-main section .box33  .space ul li{
+main section .space li{
     display: flex;
     margin: 26px 0;
     font-size: 16px;
 
 }
-main section .box33  .space ul li span{
+main section .space li span{
     font-size: 15px;
     color: black;
     padding: 0 0 0 7px;
 
 }
-main section .box33  .space ul li:first-child{
+main section .space li:first-child{
     margin-top: 40px;
 
 }
-main section .box33 .space h4{
+main section .space h4{
     padding-left: 7px;
     margin-bottom: 22px;
     font-size: 23px;
 }
-main section .box33 .space h5,
-main section .box33 .space span{
+main section .space h5,
+main section .space span{
     padding-left: 5px;
     font-size: 14px;
 }
-main section .box33 .space h5{
+main section .space h5{
     margin-bottom: 12px;
 }
-main section .box33 .space span{
+main section .space span{
     color: #6B6866;
 }
-main section .box33 .space .button-section{
-    justify-content: center;
-    padding: 0 7px;
-    flex-wrap: wrap;
-}
 main section .box33 .space .button-section span{
-    width: 100%;
     padding: 35px 0 0 0;
 }
-main section .box33 .space hr{
+main section .space hr{
     margin: 30px 0 55px 7px;
     width: 48px;
     border: none;
@@ -201,13 +202,6 @@ main section .box33 .space hr{
 }
 main section .box33 .space ul.check i{
     color: var(--button-background); 
-}
-main section .box100 .space.flex{
-    flex-wrap: nowrap;
-}
-main section .flex .box100{
-    width: 100%;
-    border: 1px solid var(--button-border);
 }
 main section .flex .box100 .button-section.top{
     margin-top: 0px;
