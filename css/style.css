@@ -4,3 +4,52 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* Common */
+:root{
+    --nav-background: white;
+    --nav-border: #D1D9E1;
+    --button-background: #0061FF;
+    --button-text: white;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+.flex{
+    display: flex;
+}
+ul{
+    list-style-type: none;
+}
+button{
+    all: unset;
+    background-color: var(--button-background);
+    color: var(--button-text);
+    padding: 8px 17px;
+    cursor: pointer;
+    font-size: 14px;
+}
+/* Header */
+header{
+    background-color: var(--nav-background);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 23px 20px;
+    border-bottom: 1px solid var(--nav-border);
+}
+header nav{
+    justify-content: space-between;
+    align-items: center;
+}
+header nav ul{
+    gap: 42px;
+    align-items: center;
+}
+header nav ul li{
+    display: inline;
+    font-size: 14px;
+}
+header nav ul li button{
+    margin-left: -21px;
+}
