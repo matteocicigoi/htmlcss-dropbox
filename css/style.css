@@ -11,6 +11,7 @@
     --nav-border: #D1D9E1;
     --button-background: #0061FF;
     --button-text: white;
+    --button-border: #D0D0D3;
 }
 body{
     font-family: 'Open Sans', sans-serif;
@@ -23,6 +24,10 @@ body{
     max-width: 1200px;
     margin: 0 auto;
 }
+.container-small{
+    max-width: 1000px;
+    margin: 0 auto;
+}
 ul{
     list-style-type: none;
 }
@@ -33,10 +38,26 @@ button{
     padding: 8px 17px;
     cursor: pointer;
 }
+button.check, button.checked{
+    padding: 8px;
+    background-color: white;
+    border: 2px solid var(--button-border);
+    border-radius: 50%;
+    vertical-align: middle;
+}
+button.checked{
+    padding: 5px;
+    border: 5px solid var(--button-background);
+}
+button.full{
+    width: 100%;
+    text-align: center;
+}
 /* Header */
 header{
     background-color: var(--header-background);
     padding-top: 82px;
+    margin-bottom: 164px;
 }
 /* Header - Nav */
 header nav{
@@ -100,4 +121,95 @@ header .flex .large-box img{
     position: absolute;
     top: 0;
     left: 0;
+}
+/* Main */
+main section h2{
+    font-size: 39px;
+    margin-bottom: 73px;
+}
+main section span{
+    vertical-align: top;
+    padding: 0 50px 0 5px;
+}
+main section > button{
+    margin-bottom: 50px;
+}
+main section .flex{
+    gap: 50px;
+    flex-wrap: wrap;
+}
+main section .flex .box33{
+    width: calc((100% - 100px) / 3);
+    border: 1px solid var(--button-border);
+}
+main section .box33 h3{
+    font-weight: 400;
+    font-size: 13px;
+    text-align: center;
+    padding: 12px;
+    border-bottom: 1px solid var(--button-border);
+}
+main section .box33 .space{
+    padding: 39px 25px 28px;
+}
+main section .box33  .space ul li{
+    display: flex;
+    margin: 26px 0;
+    font-size: 16px;
+
+}
+main section .box33  .space ul li span{
+    font-size: 15px;
+    color: black;
+    padding: 0 0 0 7px;
+
+}
+main section .box33  .space ul li:first-child{
+    margin-top: 40px;
+
+}
+main section .box33 .space h4{
+    padding-left: 7px;
+    margin-bottom: 22px;
+    font-size: 23px;
+}
+main section .box33 .space h5,
+main section .box33 .space span{
+    padding-left: 5px;
+    font-size: 14px;
+}
+main section .box33 .space h5{
+    margin-bottom: 12px;
+}
+main section .box33 .space span{
+    color: #6B6866;
+}
+main section .box33 .space .button-section{
+    justify-content: center;
+    padding: 0 7px;
+    flex-wrap: wrap;
+}
+main section .box33 .space .button-section span{
+    width: 100%;
+    padding: 35px 0 0 0;
+}
+main section .box33 .space hr{
+    margin: 30px 0 55px 7px;
+    width: 48px;
+    border: none;
+    border-top: 1px solid var(--button-border);
+}
+main section .box33 .space ul.check i{
+    color: var(--button-background); 
+}
+main section .box100 .space.flex{
+    flex-wrap: nowrap;
+}
+main section .flex .box100{
+    width: 100%;
+    border: 1px solid var(--button-border);
+}
+main section .flex .box100 .button-section.top{
+    margin-top: 0px;
+    width: 240px;
 }
