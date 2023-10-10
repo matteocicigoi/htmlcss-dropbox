@@ -28,6 +28,11 @@ body{
     max-width: 1000px;
     margin: 0 auto;
 }
+img{
+    display: block;
+    width: 100%;
+
+}
 ul{
     list-style-type: none;
 }
@@ -67,9 +72,9 @@ header nav{
     right: 0;
     justify-content: space-between;
     align-items: center;
-    padding: 21px 20px;
+    padding: 0 20px;
     background-color: var(--nav-background);
-    border-bottom: 1px solid var(--nav-border);
+    box-shadow: 1px 1px 1px var(--nav-border);
     z-index: 99;
 }
 header nav ul{
@@ -78,17 +83,30 @@ header nav ul{
 }
 header nav ul li{
     display: inline;
+    line-height: 80px;
 }
 header nav li button{
     margin-left: -21px;
+    line-height: 16px;
+}
+header nav li:hover{
+    line-height: 79px;
+    border-bottom: 1px solid black;
+}
+header nav li.nav-logo:hover,
+header nav li.nav-button:hover
+{
+    line-height: 80px;
+    border-bottom: none;
 }
 /* Header - Container */
 header .container{
-    margin-top: 106px;
+    position: relative;
+    top: 77px;
+    left: 0;
 }
 h1{
-    padding-right: 190px;
-    font-size: 60px;
+    font-size: 77px;
     font-weight: 800;
 }
 header .container .flex{
@@ -111,16 +129,7 @@ header .flex .small-box li i{
     font-size: 42px;
 }
 header .flex .large-box{
-    position: relative;
-    top: 0;
-    left: 0;
-}
-header .flex .large-box img{
-    display: block;
-    max-width: 800px;
-    position: absolute;
-    top: 0;
-    left: 0;
+    width: 70%;
 }
 /* Main */
 main section h2{
