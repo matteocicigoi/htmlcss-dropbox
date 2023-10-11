@@ -7,11 +7,13 @@
 /* Common */
 :root{
     --header-background: #B4D0E7;
-    --nav-background: white;
+    --background-white: white;
     --nav-border: #D1D9E1;
     --button-background: #0061FF;
     --button-text: white;
-    --button-border: #D0D0D3;
+    --button-secondary: black;
+    --border: #D0D0D3;
+    --text-white: white;
 }
 body{
     font-family: 'Open Sans', sans-serif;
@@ -45,8 +47,8 @@ button{
 }
 button.check, button.checked{
     padding: 8px;
-    background-color: white;
-    border: 2px solid var(--button-border);
+    background-color: var(--background-white);
+    border: 2px solid var(--border);
     border-radius: 50%;
     vertical-align: middle;
 }
@@ -59,9 +61,9 @@ button.full{
     text-align: center;
 }
 button.secondary{
-    background-color: white;
-    border: 1px solid black;
-    color: black;
+    background-color: var(--background-white);
+    border: 1px solid var(--button-secondary);
+    color: var(--button-secondary);
     font-size: 15px;
 }
 button:hover{
@@ -69,12 +71,6 @@ button:hover{
 }
 /* Header */
 header{
-    background-color: var(--header-background);
-    padding-top: 82px;
-    margin-bottom: 164px;
-}
-/* Header - Nav */
-header nav{
     height: 80px;
     position: fixed;
     top: 0;
@@ -83,68 +79,72 @@ header nav{
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    background-color: var(--nav-background);
+    background-color: var(--background-white);
     box-shadow: 1px 1px 1px var(--nav-border);
     z-index: 99;
 }
-header nav ul{
+header ul{
     gap: 42px;
     align-items: center;
 }
-header nav ul li{
+header ul li{
     display: inline;
     line-height: 80px;
 }
-header nav li button{
+header li button{
     margin-left: -21px;
     line-height: 16px;
 }
-header nav li:hover{
+header li:hover{
     border-bottom: 1px solid black;
 }
-header nav li.nav-logo:hover,
-header nav li.nav-button:hover
+header li.nav-logo:hover,
+header li.nav-button:hover
 {
     line-height: 80px;
     border-bottom: none;
 }
-header nav a{
+header a{
     text-decoration: none;
     color: inherit;
-}
-/* Header - Container */
-header .container{
-    position: relative;
-    top: 77px;
-    left: 0;
 }
 h1{
     font-size: 77px;
     font-weight: 800;
 }
-header .container .flex{
+/* Main */
+/* Main - Jumbo */
+main .jumbo{
+    background-color: var(--header-background);
+    margin: 80px 0 164px;
+}
+main .jumbo .container{
+    position: relative;
+    top: 77px;
+    left: 0;
+}
+main .jumbo .container .flex{
     margin-top: 62px;
 }
-header .flex .small-box{
+main .jumbo .flex .small-box{
     display: block;
     max-width: 360px;
 }
-header .flex .small-box li{
+main .jumbo .flex .small-box li{
     padding: 17.5px 0;
 }
-header .flex .small-box li:first-child{
+main .jumbo .flex .small-box li:first-child{
     padding-top: 0px;
 }
-header .flex .small-box li:last-child{
+main .jumbo .flex .small-box li:last-child{
     margin: 42px 0 5.5px;
 }
-header .flex .small-box li i{
+main .jumbo .flex .small-box li i{
     font-size: 42px;
 }
-header .flex .large-box{
+main .jumbo .flex .large-box{
     width: 70%;
 }
-/* Main */
 /* Main - Prima Sezione */
 main section h2{
     font-size: 39px;
@@ -160,7 +160,7 @@ main section > .fatturazione{
 main section .flex .box33,
 main section .flex .box100{
     width: calc((100% - 100px) / 3);
-    border: 1px solid var(--button-border);
+    border: 1px solid var(--border);
 }
 main section .flex .box100{
     width: 100%;
@@ -177,7 +177,7 @@ main section h3{
     font-size: 13px;
     text-align: center;
     padding: 12px;
-    border-bottom: 1px solid var(--button-border);
+    border-bottom: 1px solid var(--border);
 }
 main section .space{
     padding: 39px 25px 28px;
@@ -221,7 +221,7 @@ main section .space hr{
     margin: 30px 0 55px 7px;
     width: 48px;
     border: none;
-    border-top: 1px solid var(--button-border);
+    border-top: 1px solid var(--border);
 }
 main section .box33 .space ul.check i{
     color: var(--button-background); 
@@ -292,7 +292,7 @@ main section.team .partner:nth-child(2) img{
 main section.team .partner hr{
     width: 108px;
     border: none;
-    border-bottom: 1px solid var(--button-border);
+    border-bottom: 1px solid var(--border);
     margin-bottom: 40px;
 }
 main section.team .partner p{
@@ -385,7 +385,7 @@ footer{
     margin-top: 150px;
     padding: 105px 0 52px;
     background-color: black;
-    color: white;
+    color: var(--text-white);
     font-size: 15px;
 }
 footer .flex{
