@@ -40,7 +40,7 @@ button{
     all: unset;
     background-color: var(--button-background);
     color: var(--button-text);
-    padding: 8px 17px;
+    padding: 10px 17px;
     cursor: pointer;
 }
 button.check, button.checked{
@@ -64,6 +64,9 @@ button.secondary{
     color: black;
     font-size: 15px;
 }
+button:hover{
+    filter: invert(0.1);
+}
 /* Header */
 header{
     background-color: var(--header-background);
@@ -72,6 +75,7 @@ header{
 }
 /* Header - Nav */
 header nav{
+    height: 80px;
     position: fixed;
     top: 0;
     left: 0;
@@ -96,7 +100,6 @@ header nav li button{
     line-height: 16px;
 }
 header nav li:hover{
-    line-height: 79px;
     border-bottom: 1px solid black;
 }
 header nav li.nav-logo:hover,
@@ -104,6 +107,10 @@ header nav li.nav-button:hover
 {
     line-height: 80px;
     border-bottom: none;
+}
+header nav a{
+    text-decoration: none;
+    color: inherit;
 }
 /* Header - Container */
 header .container{
@@ -267,6 +274,9 @@ main section.team .flex{
     background-color: #F5F5F5;
     gap: 0;
 }
+main section.team .partner.ovreflow{
+    overflow: auto;
+}
 main section.team .partner{
     width: calc(100% / 3);
     height: calc(100vw / 3);
@@ -344,4 +354,60 @@ main section.team .container-small.team h2{
 }
 main section.team .container-small.team button{
     border: none;
+}
+/* Main - Quinta Sezione */
+main section.question{
+    margin-top: 160px;
+}
+main section.question div{
+    border-bottom: 1px solid #999999;
+    padding: 40px 45px 40px 0;
+    justify-content: space-between;
+}
+main section.question div:first-of-type{
+    border-top: 1px solid #999999;
+}
+main section.question h5{
+    font-size: 16px;
+}
+main section.question p{
+    display: none;
+    margin-top: 10px;
+}
+main section.question div:hover p{
+    display: inline-block;
+}
+main section.question div:hover h5:last-of-type{
+    transform: rotate(-180deg);
+}
+/* Footer */
+footer{
+    margin-top: 150px;
+    padding: 105px 0 52px;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+}
+footer .flex{
+    justify-content: space-between;
+}
+footer .box h4{
+    font-size: 23px;
+    padding: 0 0 15px;
+}
+footer .box li{
+    padding: 7px 0;
+}
+footer hr{
+    margin: 115px 0 46px 0;
+    border: none;
+    width: 120px;
+    border-top: 1px solid;
+}
+footer span{
+    color: #999999;
+}
+footer i{
+    vertical-align: middle;
+    padding-right: 2px;
 }
